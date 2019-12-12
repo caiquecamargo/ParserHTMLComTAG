@@ -1,0 +1,8 @@
+<h1 class="titulo">Editar dados do usuario</h1>
+<form action="edituser" class="editform">
+    <input value="${objectList[0].getId()}" name="txt_id_usuario" class="notdisplay">
+    <input type="text" placeholder="${objectList[0].getNome()}" disabled>
+    <input type="text" placeholder="${objectList[0].getEmail()}" disabled>
+    <input type="number" placeholder="${objectList[0].getNivel_de_acesso()}" disabled>
+    <button type="submit" method="POST" disabled>Atualizar</button>
+</form>

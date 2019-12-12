@@ -1,0 +1,26 @@
+<h1 class="titulo">Editar Usuario</h1>
+<div class="lista-item">
+    <div class="trigger-wrapper">
+        <div class="trigger-label">
+            <h3 class="column-name">Nome</h3>
+            <h3 class="column-name">Nivel de Acesso</h3>
+            <h3 class="column-name">Email</h3>
+        </div>
+    </div>
+</div>
+<c:forEach var="user" items="${objectList}">
+    <div class="lista-item">
+        <input type="checkbox" class="trigger-input" id="${user.getId()}">
+        <div class="trigger-wrapper">
+            <label for="${user.getId()}" class="trigger-label">
+                <h3 class="trigger-nome">${user.getNome()}</h3>
+                <h3 class="trigger-tipo">${user.getNivel_de_acesso()}</h3>
+                <h3 class="trigger-src">${user.getEmail()}</h3>
+            </label>
+            <form action="edituser" method="GET" class="form-trigger">
+                <input value="${user.getId()}" name="txt_id_usuario" class="notdisplay">
+                <button class="trigger-conteudo" type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+</c:forEach>
