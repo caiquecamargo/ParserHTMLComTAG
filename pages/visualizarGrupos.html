@@ -1,4 +1,7 @@
+<!-- title -->
 <h1 class="titulo">Seus grupos</h1>
+<!-- title -->
+<!-- header -->
 <div class="lista-item">
     <div class="trigger-wrapper">
         <div class="trigger-label">
@@ -8,21 +11,22 @@
         </div>
     </div>
 </div>
-<c:forEach var="grupo" items="${objectList}">
-    <div class="lista-item">
-        <input type="checkbox" class="trigger-input" id="${grupo.getId()}">
-        <div class="trigger-wrapper">
-            <label for="${grupo.getId()}" class="trigger-label">
-                <h3 class="trigger-nome">${grupo.getNome()}</h3>
-                <h3 class="trigger-tipo">${grupo.getNivel()}</h3>
-                <h3 class="trigger-src">${grupo.getDescricao()}</h3>
-            </label>
-            <form class="form-trigger">
-                <input value="${grupo.getId()}" name="txt_id_grupo" class="notdisplay">
-                <button class="trigger-conteudo" type="submit" formaction="editgroup" formmethod="GET">Editar</button>
-                <button class="trigger-conteudo" type="submit" formaction="viewgroupmembers" formmethod="POST">Visualizar membros do grupo</button>
-                <button class="trigger-conteudo" type="submit" formaction="deletegroup" formmethod="POST">Excluir</button>
-            </form>
-        </div>
+<!-- header -->
+<!-- content -->
+<div class="lista-item">
+    <input type="checkbox" class="trigger-input" id="?id?">
+    <div class="trigger-wrapper">
+        <label for="?id?" class="trigger-label">
+            <h3 class="trigger-nome">?nome?</h3>
+            <h3 class="trigger-tipo">?nivel?</h3>
+            <h3 class="trigger-src">?descricao?</h3>
+        </label>
+        <form class="form-trigger">
+            <input value="?id?" name="txt_id_grupo" class="notdisplay">
+            <button class="trigger-conteudo" type="submit" formaction="editgroup" formmethod="GET">Editar</button>
+            <button class="trigger-conteudo" type="submit" formaction="viewgroupmembers" formmethod="POST">Visualizar membros do grupo</button>
+            <button class="trigger-conteudo" type="submit" formaction="deletegroup" formmethod="POST">Excluir</button>
+        </form>
     </div>
-</c:forEach>
+</div>
+<!-- content -->

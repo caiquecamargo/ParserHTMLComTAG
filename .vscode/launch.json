@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - ParserHTML",
+      "request": "launch",
+      "mainClass": "ParserHTML",
+      "projectName": "ParserHTMLComTAG_fcf69698"
+    }
+  ]
+}
